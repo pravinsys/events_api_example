@@ -6,7 +6,6 @@ RSpec.describe "Users", type: :request do
   describe "GET /index" do
     it "returns http success" do
       get "/api/v1/users", headers: { "HTTP_API_USER_TOKEN": user.id }
-      # expect(response.body).to eq('{"status":"online"}')
       expect(response.status).to eq(200)
     end
   end
